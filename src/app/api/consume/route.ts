@@ -13,9 +13,9 @@ export async function GET() {
   const resetTimeout = () => {
     if (timeout) clearTimeout(timeout);
     timeout = setTimeout(() => {
-      console.log("No events for 30 seconds. Stopping stream.");
+      console.log("No events for 5 seconds. Stopping stream.");
       stream.cancel(); // Stop the generator
-    }, 30000); // 30-second timeout
+    }, 5000); // 5-second timeout
   };
 
   // Initialize the timeout before the loop
